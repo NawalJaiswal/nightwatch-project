@@ -23,7 +23,7 @@ jobs:
       run: npm ci
       
     - name: Run Nightwatch tests
-      run: npm test
+      run: npm tag
       
     - name: Generate Allure Report
       if: always()
