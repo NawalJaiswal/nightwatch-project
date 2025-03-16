@@ -1,3 +1,5 @@
+const allureReporter = require('nightwatch-allure');
+
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
   // if this is not specified, the test source must be passed as the second argument to the test runner.
@@ -31,8 +33,9 @@ module.exports = {
 
       globals: {
         reporter: (results, done) => {
-          require('nightwatch-allure').write(results, done);
-        }
+          const reporter = new allureReporter.NightwatchAllureReporter({});
+          reporter.write(results, done);
+      },
       },
 
       screenshots: {

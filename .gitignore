@@ -1,8 +1,13 @@
 node_modules/
 chromedriver.log
 geckodriver.log
-# package-lock.json
+package-lock.json
 npm-debug.log
 .DS_Store
-reports/
-allure-results
+allure-report/
+allure-results/
+tests_output/
+
+# Logs
+logs
+*.log
